@@ -46,7 +46,7 @@ namespace RunGroopWebApp.Repository
             return Save();
         }
 
-        public bool Delete(Club race)
+        public bool Delete(Race race)
         {
             _context.Remove(race);
             return Save();

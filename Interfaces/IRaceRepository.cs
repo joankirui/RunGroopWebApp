@@ -11,7 +11,7 @@ namespace RunGroopWebApp.Interfaces
 
         bool Add(Race race);
         bool Update(Race race);
-        bool Delete(Club race);
+        bool Delete(Race race);
         bool Save();
     }
 }

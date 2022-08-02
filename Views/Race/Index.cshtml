@@ -23,6 +23,7 @@
                                     @if (User.Identity.IsAuthenticated && User.IsInRole("admin"))
                                     {
                                         <a asp-controller="Race" asp-action="Edit" asp-route-id="@item.Id" type="button" class="btn btn-sm btn-outline-secondary">Edit</a>
+                                        <a asp-controller="Race" asp-action="Delete" asp-route-id="@item.Id" type="button" class="btn btn-sm btn-outline-secondary">Delete</a>
                                     }
                                 </div>
                                 <small class="text-muted">@item.RaceCategory</small>
