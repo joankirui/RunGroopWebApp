@@ -8,6 +8,9 @@ namespace RunGroopWebApp.Models
     {
         public int? Pace { get; set; }
         public int? Mileage { get; set; }
+        public string? ProfileImageUrl { get; set; }
+        public string? City { get; set; }
+        public string? State { get; set; } //? means this does not require a value
         [ForeignKey("Address")]//links addresses together
         public int AddressId { get; set; }
         public Address? Address { get; set; }
