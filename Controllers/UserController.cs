@@ -25,6 +25,7 @@ namespace RunGroopWebApp.Controllers
                     UserName = user.UserName,
                     Pace = user.Pace,
                     Mileage = user.Mileage,
+                    ProfileImageUrl = user.ProfileImageUrl
                 };
                 result.Add(userViewModel);
             }
@@ -35,13 +36,14 @@ namespace RunGroopWebApp.Controllers
         public async Task<IActionResult> Detail(string id)
         {
             var user = await _userRepository.GetUserById(id);
-            var userDetailViewModel = new UserViewModel()
+            var userDetailViewModel = new UserDetailViewModel()
             {
                 Id = user.Id,
                 UserName = user.UserName,
                 Pace = user.Pace,
                 Mileage = user.Mileage,
             };
+
             return View(userDetailViewModel);
         }
     }
